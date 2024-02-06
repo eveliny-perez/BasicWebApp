@@ -8,9 +8,16 @@
         /* Custom CSS styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: pink; /* Updated background color to pink */
             margin: 0;
             padding: 0;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+        }
+        .active {
+            display: block;
         }
         header {
             background-color: #333;
@@ -31,9 +38,6 @@
         nav a:hover {
             background-color: #777;
         }
-        section {
-            padding: 20px;
-        }
         footer {
             background-color: #333;
             color: white;
@@ -52,19 +56,19 @@
 </header>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#page1">Page 1</a>
-    <a href="#page2">Page 2</a>
-    <a href="#page3">Page 3</a>
-    <a href="#result">Result</a>
+    <a href="#" onclick="showSlide('home')">Home</a>
+    <a href="#" onclick="showSlide('page1')">Page 1</a>
+    <a href="#" onclick="showSlide('page2')">Page 2</a>
+    <a href="#" onclick="showSlide('page3')">Page 3</a>
+    <a href="#" onclick="showSlide('result')">Result</a>
 </nav>
 
-<section id="home">
+<div id="home" class="slide active">
     <h2>Home Page</h2>
-    <p>Welcome to my interactive journey website. Click the links above to navigate through the pages.</p>
-</section>
+    <p>Welcome to my interactive journey website. Click the links above to navigate through the slides.</p>
+</div>
 
-<section id="page1">
+<div id="page1" class="slide">
     <h2>Page 1</h2>
     <form>
         <label for="input1">Enter a number:</label>
@@ -72,29 +76,37 @@
         <br><br>
         <button type="button" onclick="calculate()">Calculate</button>
     </form>
-</section>
+</div>
 
-<section id="page2">
+<div id="page2" class="slide">
     <h2>Page 2</h2>
-    <p>This page contains some content. Feel free to explore!</p>
+    <p>This slide contains some content. Feel free to explore!</p>
     <img src="image.jpg" alt="Image">
-</section>
+</div>
 
-<section id="page3">
+<div id="page3" class="slide">
     <h2>Page 3</h2>
-    <p>This page contains some more content. Have fun!</p>
-</section>
+    <p>This slide contains some more content. Have fun!</p>
+</div>
 
-<section id="result">
+<div id="result" class="slide">
     <h2>Result</h2>
     <p id="output">Result will be displayed here.</p>
-</section>
+</div>
 
 <footer>
     <p>&copy; 2024 Your Name. All rights reserved.</p>
 </footer>
 
 <script>
+    function showSlide(slideId) {
+        var slides = document.querySelectorAll('.slide');
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].classList.remove('active');
+        }
+        document.getElementById(slideId).classList.add('active');
+    }
+
     function calculate() {
         var input = document.getElementById("input1").value;
         var result = input * 2; // Example calculation
