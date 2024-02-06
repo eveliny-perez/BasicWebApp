@@ -1,209 +1,106 @@
 <!DOCTYPE html>
-<html>
-<!--The following code has been developed by students and/or researchers of the Freshman Research Initiative Maker Space Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.
-
-Any user of this code does so at their own risk. Members of the Maker Space Stream, FRI, and The University of Texas system are not liable for anything related to this code.
-
-Welcome to my website!
-
-Authors in chronological order of contribution:
-  Tim Riedel
-  Niam Kuttanna
-  [...]
-
-Further Information:
-  http://cns.utexas.edu/fri
-
-Brief summary of this code: [...]
-
-Known issues: [...]
-
-https://www.w3schools.com/w3css/default.asp
-https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
--->
-
-  <!--Formatting source information and webpage title.-->
-  <head>
-    <title>What Sanrio Character Are You?</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="w3.css">
-    <link rel="stylesheet" href="w3-colors-flat.css">
-  </head>
-
-  
-
-<!--Javascript code.-->
-<script>
-	var exampleVariable1 = 0;
-	var exampleVariable2 = 0;
-	var exampleVariable3 = 0;
-	
-	function exampleFunction1()
-	{
-		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
-    		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 + exampleVariable2;
-		
-		alert("You just ran an addition function!");
-		console.log("Addition function was run.");
-	}
-	
-	function exampleFunction2()
-	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 * exampleVariable2;
-		
-		alert("You just ran a multiplication function!");
-		console.log("Multiplication function was run.");
-	}
-	
-	function exampleFunction3()
-	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 ** exampleVariable2;
-		
-		alert("You just ran an exponent function!");
-		console.log("Exponent function was run.");
-	}
-	
-	function exampleResultsFunction()
-	{
-		document.getElementById("endResults").innerHTML = "Your final result is: " + exampleVariable3;
-		resetVariables();
-	}
-	
-	function resetVariables()
-	{
-		exampleVariable1 = 0;
-		exampleVariable2 = 0;
-		exampleVariable3 = 0;
-	}
-</script>
-  
-  
- 
-<!--CSS webpage style/format settings.-->
-<style>	
-.body {
-     margin: 0 auto;
-}
-
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
-
-.page:target {
-    left: 0vw;
-    z-index: 1;
-}
-</style>
-
-
-
-<!--Main HTML body section.-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Journey</title>
+    <style>
+        /* Custom CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            background-color: #555;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #777;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
 <body>
-  <!--Landing page content.-->
-  <div id="content" class="w3-container">
-  	<!--Header!-->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>APP NAME GOES HERE</h1>
-	</div>
-	
-	  <p>INTRODUCTION/DESCRIPTION OF APP GOES HERE</p>
-	
-	  <a href="#one" class="w3-btn w3-grey w3-round">Get Started!</a>
-	
-	  <p>The following code has been developed by students and/or researchers of the Freshman Research Initiative Maker Space Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the Maker Space Stream, FRI, and The University of Texas system are not liable for anything related to this code. THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION!</p>
-  
-  
-  
-<!--FIRST SUBPAGE-->
-<div id="one" class="page">
-	<div id="header2" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
-	</div>
-	
-  <center>
-    
-    	<div id="content2" class="w3-container">
-        	<p>QUESTION 1 GOES HERE</p>    
-    	</div>
-	
-	<!--Form element. This allows for user input in HTML.-->
-	<form>
-		<!--Label for first input field.-->
-		<label for="firstInputBox">Enter a number:</label><br>
-		<!--User input box.-->
-		<input type="number" id="firstInputBox" value="0"><br>
-		<!--Label for second input field.-->
-		<label for="secondInputBox">Enter another number:</label><br>
-		<!--User input box.-->
-		<input type="number" id="secondInputBox" value="0">
-		
-		<br><br><br>
-	</form>
-      
-  <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Button 1</a>
-  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Button 2</a>
-  <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a>
-    
-  </center>
-</div>  
-  
-  
-  
 
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-<!--LAST SUBPAGE-->
-<div id="finalpage" class="page">
-	<div id="finalheader" class="w3-container w3-flat-carrot">
-		<h1>FINAL PAGE TITLE GOES HERE</h1>
-	</div>
-	
-  <center>
-    
-	  <div id="finalcontent" class="w3-container">
-		  <p id="endResults">FINAL PAGE CONTENT GOES HERE</p>
-	  </div>
-  
-  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
-    <br>
-    <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob">
-  </a>
-  <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Return to Home Page</a>
-    
-  </center>
-</div>
-  
-  
-  
-<!--Footer!-->
-<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>YOUR NAME (or anything you want) HERE</p>
+<header>
+    <h1>Welcome to My Interactive Journey</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#page1">Page 1</a>
+    <a href="#page2">Page 2</a>
+    <a href="#page3">Page 3</a>
+    <a href="#result">Result</a>
+</nav>
+
+<section id="home">
+    <h2>Home Page</h2>
+    <p>Welcome to my interactive journey website. Click the links above to navigate through the pages.</p>
+</section>
+
+<section id="page1">
+    <h2>Page 1</h2>
+    <form>
+        <label for="input1">Enter a number:</label>
+        <input type="number" id="input1">
+        <br><br>
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+</section>
+
+<section id="page2">
+    <h2>Page 2</h2>
+    <p>This page contains some content. Feel free to explore!</p>
+    <img src="image.jpg" alt="Image">
+</section>
+
+<section id="page3">
+    <h2>Page 3</h2>
+    <p>This page contains some more content. Have fun!</p>
+</section>
+
+<section id="result">
+    <h2>Result</h2>
+    <p id="output">Result will be displayed here.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
 </footer>
-</div>
+
+<script>
+    function calculate() {
+        var input = document.getElementById("input1").value;
+        var result = input * 2; // Example calculation
+        document.getElementById("output").innerHTML = "The result of doubling the number is: " + result;
+    }
+</script>
 
 </body>
 </html>
