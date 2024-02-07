@@ -1,211 +1,243 @@
 <!DOCTYPE html>
-<html>
-<!--The following code has been developed by students and/or researchers of the Freshman Research Initiative Maker Space Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.
-
-Any user of this code does so at their own risk. Members of the Maker Space Stream, FRI, and The University of Texas system are not liable for anything related to this code.
-
-Welcome to my website!
-
-Authors in chronological order of contribution:
-  Tim Riedel
-  Niam Kuttanna
-  [...]
-
-Further Information:
-  http://cns.utexas.edu/fri
-
-Brief summary of this code: [...]
-
-Known issues: [...]
-
-https://www.w3schools.com/w3css/default.asp
-https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
--->
-
-  <!--Formatting source information and webpage title.-->
+<html lang="en">
   <head>
-    <title>What Sanrio Character Are You?</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="w3.css">
-    <link rel="stylesheet" href="w3-colors-flat.css">
+    <title>Billie Eilish Song Quiz</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+    </style>
   </head>
+  <body>
+    <h1>Which Billie Eilish song best fits you?</h1>
 
-  
+    <!-- First Question <-->
+    <h2>Which instrument sound do you prefer?</h2>
+    <div class="question">
+      <div class="answer-choice">
+        <button id="q1a1">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fbass.jpg?v=1597270130301"
+            alt="bass"
+          />
+          <div class="desc">Bass</div>
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q1a2">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fvocal.jp2?v=1597261677869"
+            alt="vocals"
+          />
+          <div class="desc">Vocals</div>
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q1a3">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fpiano.jp2?v=1597261584113"
+            alt="piano"
+          />
+          <div class="desc">Piano</div>
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q1a4">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fguitar.jp2?v=1597261480765"
+            alt="guitar"
+          />
+          <div class="desc">Guitar</div>
+        </button>
+      </div>
+    </div>
 
-<!--Javascript code.-->
-<script>
-	var exampleVariable1 = 0;
-	var exampleVariable2 = 0;
-	var exampleVariable3 = 0;
-	
-	function exampleFunction1()
-	{
-		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
-    		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 + exampleVariable2;
-		
-		alert("You just ran an addition function!");
-		console.log("Addition function was run.");
-	}
-	
-	function exampleFunction2()
-	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 * exampleVariable2;
-		
-		alert("You just ran a multiplication function!");
-		console.log("Multiplication function was run.");
-	}
-	
-	function exampleFunction3()
-	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 ** exampleVariable2;
-		
-		alert("You just ran an exponent function!");
-		console.log("Exponent function was run.");
-	}
-	
-	function exampleResultsFunction()
-	{
-		document.getElementById("endResults").innerHTML = "Your final result is: " + exampleVariable3;
-		resetVariables();
-	}
-	
-	function resetVariables()
-	{
-		exampleVariable1 = 0;
-		exampleVariable2 = 0;
-		exampleVariable3 = 0;
-	}
-</script>
-  
-  
- 
-<!--CSS webpage style/format settings.-->
-<style>	
-.body {
-     margin: 0 auto;
-}
+    <!-- Second Question <-->
+    <h2>Which two words best describe your personality?</h2>
+    <div class="question">
+      <div class="answer-choice">
+        <button id="q2a1"><p>Wild and Fierce</p></button>
+      </div>
+      <div class="answer-choice">
+        <button id="q2a2"><p>Artistic and Calm</p></button>
+      </div>
+      <div class="answer-choice">
+        <button id="q2a3"><p>Caring and Introspective</p></button>
+      </div>
+      <div class="answer-choice">
+        <button id="q2a4"><p>Carefree and Adventurous</p></button>
+      </div>
+    </div>
 
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
+    <!-- Third Question <-->
+    <h2>Pick one of the four elements of matter.</h2>
+    <div class="question">
+      <div class="answer-choice">
+        <button id="q3a1">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Ffire.jpg?v=1597299667685"
+            alt="fire"
+          />
+          <div class="desc">Fire</div>
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q3a2">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fair.jpg?v=1597299901769"
+            alt="air"
+          />
+          <div class="desc">Air</div>
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q3a3">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fwater.jpg?v=1597299934501"
+            alt="water"
+          />
+          <div class="desc">Water</div>
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q3a4">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fearth.jpg?v=1597299955549"
+            alt="earth"
+          />
+          <div class="desc">Earth</div>
+        </button>
+      </div>
+    </div>
 
-.page:target {
-    left: 0vw;
-    z-index: 1;
-}
-</style>
+    <!-- Fourth Question <-->
+    <h2>Pick a colour palette.</h2>
+    <div class="question">
+      <div class="answer-choice">
+        <button id="q4a1">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fbright-colours.png?v=1597328002113"
+            alt="bright colours"
+          />
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q4a2">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fmuted-colours.png?v=1597328231356"
+            alt="muted colours"
+          />
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q4a3">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fcool-colours.png?v=1597328091906"
+            alt="cool-toned colours"
+          />
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q4a4">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fwarm-colours.png?v=1597328097654"
+            alt="warm-toned colours"
+          />
+        </button>
+      </div>
+    </div>
 
+    <!-- Fifth Question <-->
+    <h2>It is the weekend. What are you most likely doing?</h2>
+    <div class="question">
+      <div class="answer-choice">
+        <button id="q5a1">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fpartying.jpg?v=1597331695599"
+            alt="partying"
+          />
+          <div class="desc">Partying</div>
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q5a2">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fstudying.jpg?v=1597331730558"
+            alt="studying/working"
+          />
+          <div class="desc">Studying/Working</div>
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q5a3">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fwatchingmovie.jp2?v=1597331749164"
+            alt="watching a movie"
+          />
+          <div class="desc">Watching a movie</div>
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q5a4">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Froadtrip.jpg?v=1597331766126"
+            alt="On a road trip"
+          />
+          <div class="desc">On a road trip</div>
+        </button>
+      </div>
+    </div>
 
+    <!-- Sixth Question <-->
+    <h2>Who do you spend the most time with?</h2>
+    <div class="question">
+      <div class="answer-choice">
+        <button id="q6a1">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Ffamily.jpg?v=1597335437713"
+            alt="friends/family"
+          />
+          <div class="desc">Friends/Family</div>
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q6a2">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fmyself.jpg?v=1597335424260"
+            alt="myself"
+          />
+          <div class="desc">Myself</div>
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q6a3">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fmy%20partner.jpg?v=1597335376667"
+            alt="my partner"
+          />
+          <div class="desc">My partner</div>
+        </button>
+      </div>
+      <div class="answer-choice">
+        <button id="q6a4">
+          <img
+            src="https://cdn.glitch.com/2b28f74a-8a02-4992-9bf6-c975d2b04cbb%2Fnewpeople.jpg?v=1597335393683"
+            alt="new people"
+          />
+          <div class="desc">New people</div>
+        </button>
+      </div>
+    </div>
 
-<!--Main HTML body section.-->
-<body>
-  <!--Landing page content.-->
-  <div id="content" class="w3-container">
-  	<!--Header!-->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>APP NAME GOES HERE</h1>
-	</div>
-	
-	  <p>INTRODUCTION/DESCRIPTION OF APP GOES HERE</p>
-	
-	  <a href="#one" class="w3-btn w3-grey w3-round">Get Started!</a>
-	
-	  <p>The following code has been developed by students and/or researchers of the Freshman Research Initiative Maker Space Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the Maker Space Stream, FRI, and The University of Texas system are not liable for anything related to this code. THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION!</p>
-  
-  
-  
-<!--FIRST SUBPAGE-->
-<div id="one" class="page">
-	<div id="header2" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
-	</div>
-	
-  <center>
-    
-    	<div id="content2" class="w3-container">
-        	<p>What is your favorite color?</p>    
-    	</div>
-	
-	<!--Form element. This allows for user input in HTML.-->
-	<form>
-		<!--Label for first input field.-->
-		<label for="firstInputBox">Enter a word:</label><br>
-		<!--User input box.-->
-		<input type="word" id="firstInputBox" value="pink"><br>
-		<!--Label for second input field.-->
-		<label for="secondInputBox">Enter another word:</label><br>
-		<!--User input box.-->
-		<input type="number" id="secondInputBox" value="black">
-		
-		<br><br><br>
-	</form>
-      
-  <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Button 1</a>
-  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Button 2</a>
-  <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a>
-    
-  </center>
-</div>  
-  
-  
-  
-
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-<!--LAST SUBPAGE-->
-<div id="finalpage" class="page">
-	<div id="finalheader" class="w3-container w3-flat-carrot">
-		<h1>FINAL PAGE TITLE GOES HERE</h1>
-	</div>
-	
-  <center>
-    
-	  <div id="finalcontent" class="w3-container">
-		  <p id="endResults">FINAL PAGE CONTENT GOES HERE</p>
-	  </div>
-  
-  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
-    <br>
-    <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob">
-  </a>
-  <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Return to Home Page</a>
-    
-  </center>
-</div>
-  
-  
-  
-<!--Footer!-->
-<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>YOUR NAME (or anything you want) HERE</p>
-</footer>
-</div>
-
-</body>
+    <div class="result">
+      <h2 id="result">Your result is...</h2>
+    </div>
+    <div class="restart-button">
+      <button id="restart">Restart</button>
+    </div>
+  </body>
 </html>
-
 
