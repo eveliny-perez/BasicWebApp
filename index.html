@@ -70,7 +70,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: -100vw;
     overflow-y: auto;
     z-index: 0;
-    background-color: hsl(0, 0%, 100%);
+    background-color: #add8e6; /* Darker Blue color */
   }
 
   .page:target {
@@ -87,6 +87,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
     <p>Answer the following questions to find out which Pink Floyd song represents you the most!</p>
 
+    <!-- Let's Get Started Link -->
+    <a href="#question1" class="w3-btn w3-grey">Let's Get Started!</a>
+
     <!-- Questions -->
     <div id="question1" class="page">
       <div id="header2" class="w3-container w3-flat-carrot">
@@ -100,6 +103,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <label for="q1_option2">Keyboard</label><br>
         <input type="radio" id="q1_option3" name="question1" value="3">
         <label for="q1_option3">Drums</label><br>
+        <input type="radio" id="q1_option4" name="question1" value="4">
+        <label for="q1_option4">Saxophone</label><br>
       </div>
       <a href="#question2" onclick="calculateSong();" class="w3-btn w3-grey">Next</a>
     </div>
@@ -108,14 +113,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <div id="header3" class="w3-container w3-flat-carrot">
         <h2>Question 2</h2>
       </div>
-      <div id="content3" class="w3-container">
+      <div id="content3" class="w3-container" style="background-color: #add8e6;"> <!-- Darker Blue color -->
         <p>What's your favorite Pink Floyd album?</p>
+        <p align = "center">
+          <img height = "200" alt="Album Covers" src="https://cdn.glitch.global/24ee2904-4bac-4871-a4f4-96994cca78fc/pink%20floyd%20albums.jpg?v=1707275580520" >
+        </p>
         <input type="radio" id="q2_option1" name="question2" value="1">
         <label for="q2_option1">The Dark Side of the Moon</label><br>
         <input type="radio" id="q2_option2" name="question2" value="2">
         <label for="q2_option2">Wish You Were Here</label><br>
         <input type="radio" id="q2_option3" name="question2" value="3">
         <label for="q2_option3">The Wall</label><br>
+        <input type="radio" id="q2_option4" name="question2" value="4">
+        <label for="q2_option4">Animals</label><br>
       </div>
       <a href="#question3" onclick="calculateSong();" class="w3-btn w3-grey">Next</a>
     </div>
@@ -132,6 +142,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <label for="q3_option2">"How I wish, how I wish you were here"</label><br>
         <input type="radio" id="q3_option3" name="question3" value="3">
         <label for="q3_option3">"Hello, is there anybody in there?"</label><br>
+        <input type="radio" id="q3_option4" name="question3" value="4">
+        <label for="q3_option4">"Money, it's a gas"</label><br>
       </div>
       <a href="#result" onclick="calculateSong();" class="w3-btn w3-grey">See Result</a>
     </div>
@@ -147,4 +159,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     </div>
 
     <!-- Footer -->
-    <footer class="w3-bottom w3-container w3-flat
+    <footer class="w3-bottom w3-container w3-flat-carrot">
+      <p>Welcome!</p>
+    </footer>
+    
+  </div>
+
+</body>
+
+</html>
